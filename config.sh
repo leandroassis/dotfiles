@@ -7,11 +7,13 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 
 # instala os pacotes
-sudo apt-get install make gcc g++ python3 python3-pip neovim curl -y
+sudo apt-get install make gcc g++ python3 python3-pip neovim curl ghdl -y
 
 # instala o nordvpn
 #sudo sh -c 'curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh'
 #nordvpn login
+
+# instalar GTKWave
 
 # instala os pacotes python
 pip3 install matplotlib numpy pandas scipy sklearn notebook keras tensorflow jedi
