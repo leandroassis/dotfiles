@@ -17,7 +17,7 @@ sudo apt-get install make gcc g++ python3 python3-pip neovim curl -y
 pip3 install matplotlib numpy pandas scipy sklearn notebook keras tensorflow jedi
 
 # neovim
-mv -r config/.config ./
+cp -r config/.config ./.config
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 sudo apt-get install exuberant-ctags -y
 sudo apt install npm -y

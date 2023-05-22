@@ -16,6 +16,8 @@
 :filetype plugin on
 :filetype indent on
 
+" TO DO: Adicionar NerdFonts e instalar no terminal
+
 call plug#begin()
 
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
@@ -38,7 +40,7 @@ set encoding=UTF-8
 call plug#end()
 
 " REMAP
-nnoremap <C-b > :NERDTreeFocus<CR>
+nnoremap <C-b> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
