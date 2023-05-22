@@ -3,14 +3,14 @@
 cd ~
 
 # atualiza os pacotes
-apt-get update -y
-apt-get upgrade -y
+sudo apt-get update -y
+sudo apt-get upgrade -y
 
 # instala os pacotes
-apt-get install make gcc g++ python3 python3-pip neovim curl -y
+sudo apt-get install make gcc g++ python3 python3-pip neovim curl -y
 
 # instala o nordvpn
-sh -c 'curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh'
+sh <(curl sSf https://downloads.nordcdn.com/apps/linux/install.sh)
 nordvpn login
 
 # instala os pacotes python
@@ -19,13 +19,13 @@ pip3 install matplotlib numpy pandas scipy sklearn notebook keras tensorflow jed
 # neovim
 mv -r config/.config ./
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-apt-get install exuberant-ctags -y
-apt install npm -y
-npm install -g n
-n latest
+sudo apt-get install exuberant-ctags -y
+sudo apt install npm -y
+sudo npm install -g n
+sudo n latest
 cd plugged/coc.nvim/
 sudo npm install -g yarn
-yarn install
+sudo yarn install
 
 git clone https://github.com/github/copilot.vim ~/.config/nvim/plugged/github/start/copilot.vim
 
