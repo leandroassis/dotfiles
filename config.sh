@@ -10,8 +10,8 @@ sudo apt-get upgrade -y
 sudo apt-get install make gcc g++ python3 python3-pip neovim curl -y
 
 # instala o nordvpn
-sh <(curl sSf https://downloads.nordcdn.com/apps/linux/install.sh)
-nordvpn login
+#sudo sh -c 'curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh'
+#nordvpn login
 
 # instala os pacotes python
 pip3 install matplotlib numpy pandas scipy sklearn notebook keras tensorflow jedi
@@ -28,6 +28,9 @@ sudo npm install -g yarn
 sudo yarn install
 
 git clone https://github.com/github/copilot.vim ~/.config/nvim/plugged/github/start/copilot.vim
+
+# configura o zsh
+# to do
 
 # gera chave SSH pro github
 ssh-keygen -t ed25519 -C "assissantosleandro@poli.ufrj.br"
