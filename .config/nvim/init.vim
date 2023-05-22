@@ -31,6 +31,7 @@ Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple c
 Plug 'https://github.com/sainnhe/sonokai' " Sonokai Color Scheme
 Plug 'sheerun/vim-polyglot' " Syntax Highlighting
 Plug 'dense-analysis/ale'
+Plug 'github/copilot.vim'
 
 set encoding=UTF-8
 
