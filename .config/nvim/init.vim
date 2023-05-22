@@ -5,9 +5,9 @@
 :set smarttab
 :set softtabstop=4
 :set expandtab
-:set hidder
+:set hidden
 :set scrolloff=8
-:set updateTime=100
+:set updatetime=100
 :set nobackup
 :set nowritebackup
 :set autoread
