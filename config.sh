@@ -34,6 +34,9 @@ git clone https://github.com/github/copilot.vim ~/.config/nvim/plugged/github/st
 # configura o zsh
 # to do
 
+#configura o termux
+# to do
+
 # gera chave SSH pro github
 ssh-keygen -t ed25519 -C "assissantosleandro@poli.ufrj.br"
 eval "$(ssh-agent -s)"
