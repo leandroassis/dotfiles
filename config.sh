@@ -34,7 +34,7 @@ git clone https://github.com/github/copilot.vim ~/.config/nvim/plugged/github/st
 # configura o zsh
 # to do
 
-#configura o termux
+#configura o tmux
 # to do
 
 # gera chave SSH pro github
