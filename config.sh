@@ -1,5 +1,17 @@
 #!/bin/sh
 
+while getopts i:n:p:g:z:t: flag
+do
+    case "${flag}" in
+        i) install=${OPTARG};;
+        n) neovim=${OPTARG};;
+        p) python=${OPTARG};;
+        g) github=${OPTARG};;
+        z) zsh=${OPTARG};;
+        t) tmux=${OPTARG};;
+    esac
+done
+
 cd ~
 
 # atualiza os pacotes
@@ -19,7 +31,13 @@ sudo apt-get install make gcc g++ python3 python3-pip neovim curl ghdl -y
 pip3 install matplotlib numpy pandas scipy sklearn notebook keras tensorflow jedi
 
 # neovim
-cp -r config/.config ./.config
+CONFIG_DIR = "~/.config/"
+if [ -d "$CONFIG_DIR"]; then
+  cp -r ./config/.config/nvim ./.config/nvim
+else
+  cp -r config/.config ./.config
+fi
+
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 sudo apt-get install exuberant-ctags -y
 sudo apt install npm -y
