@@ -12,11 +12,10 @@
 :set nowritebackup
 :set autoread
 :set completeopt-=preview
+:set mouse=a
 :filetype on
 :filetype plugin on
 :filetype indent on
-
-" TO DO: Adicionar NerdFonts e instalar no terminal
 
 call plug#begin()
 
@@ -34,6 +33,7 @@ Plug 'https://github.com/sainnhe/sonokai' " Sonokai Color Scheme
 Plug 'sheerun/vim-polyglot' " Syntax Highlighting
 Plug 'dense-analysis/ale'
 Plug 'github/copilot.vim'
+Plug 'christoomey/vim-tmux-navigator'
 
 set encoding=UTF-8
 
@@ -47,17 +47,18 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+noremap <silent> <c-h> {Left-Mapping} :<C-U>TmuxNavigateLeft<cr>
+noremap <silent> <c-j> {Down-Mapping} :<C-U>TmuxNavigateDown<cr>
+noremap <silent> <c-k> {Up-Mapping} :<C-U>TmuxNavigateUp<cr>
+noremap <silent> <c-l> {Right-Mapping} :<C-U>TmuxNavigateRight<cr>
+noremap <silent> <c-p> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
 
 nmap <F8> :TagbarToggle<CR>
 " END REMAP
 
 " THEMES
 :colorscheme sonokai
-let g:sonokai_style = 'shusia'
+let g:sonokai_style = '𝐀𝐧𝐝𝐫𝐨𝐦𝐞𝐝𝐚'
 let g:sonokai_enable_italic = 1
 let g:sonokai_disable_italic_comment = 0
 let g:sonokai_diagnostic_line_highlight = 1
@@ -88,13 +89,10 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" ALE
-let g:ale_linters = {
-\}
+" tmux-navigate
+let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_save_on_switch = 1
+let g:tmux_navigator_preserve_zoom = 1
 
-let g:ale_fixers = {
-\   '*': ['trim_whitespace'],
-\}
-
-let g:ale_fix_on_save = 1
-
+" coc
+let g:coc_global_extensions = ['coc-git', 'coc-clangd', 'coc-highlight', 'coc-sh', 'coc-perl', 'coc-jedi', 'coc-markdownlint', 'coc-prettier']
