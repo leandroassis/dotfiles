@@ -74,10 +74,6 @@ endif
 
 " END THEMES
 
-" NERDTree
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
-
 " air-line
 let g:airline_theme='sonokai'
 let g:airline#extensions#tabline#enabled = 1
